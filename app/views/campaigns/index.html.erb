@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+<container>
+<h1>Campaign Tracker</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Due Date</th>
+      <th>Marketo URL</th>
+      <th>Notes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @campaigns.each do |campaign| %>
+      <tr>
+        <td><%= campaign.name %></td>
+        <td><%= campaign.dueDate %></td>
+        <td><%= campaign.marketoURL %></td>
+        <td><%= campaign.notes %></td>
+        <td><%= link_to 'Show', campaign %></td>
+        <td><%= link_to 'Edit', edit_campaign_path(campaign) %></td>
+        <td><%= link_to 'Remove', campaign, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Home', index_index_path %> | <%= link_to 'New Campaign', new_campaign_path %>
+</container>
