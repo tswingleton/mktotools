@@ -1,0 +1,2 @@
+class UtmController < ApplicationController
+end
