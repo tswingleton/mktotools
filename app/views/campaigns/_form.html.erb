@@ -15,9 +15,9 @@
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
-  <div class="datepicker">
+  <div class="field">
     <%= f.label :dueDate, 'Due Date' %><br>
-    <%= f.text_field :dueDate %>
+    <%= f.text_field :dueDate, "data-provide" => 'datepicker' %>
   </div>
   <div class="field">
     <%= f.label :marketoURL, 'Marketo URL' %><br>
@@ -27,7 +27,9 @@
     <%= f.label :notes, 'Notes' %><br>
     <%= f.text_field :notes %>
   </div>
+  <center>
   <div class="actions">
     <%= f.submit %>
   </div>
+  </center>
 <% end %>
